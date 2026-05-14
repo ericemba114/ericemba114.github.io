@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基隆廟口全攻略 | 高質感美型漫畫風</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        keelung: {
+                            gold: '#FFD700',
+                            red: '#E63946',
+                            dark: '#1D3557',
+                            light: '#F1FAEE',
+                            blue: '#457B9D',
+                            manga: '#2B2D42'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans TC', 'sans-serif'],
+                        display: ['ZCOOL KuaiLe', 'cursive'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0b0e14;
+            color: #e0e0e0;
+            overflow-x: hidden;
+        }
+
+        .manga-border {
+            border: 3px solid #000;
+            box-shadow: 8px 8px 0px #000;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1.5rem;
+        }
+
+        .gradient-text {
+            background: linear-gradient(45deg, #FFD700, #ff8c00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-dot {
+            height: 12px;
+            width: 12px;
+            background-color: #E63946;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 10px;
+            box-shadow: 0 0 10px #E63946;
+        }
+
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .manga-panel {
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .manga-panel:hover {
+            transform: scale(1.02) rotate(1deg);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0b0e14;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #457B9D;
+            border-radius: 10px;
+        }
+
+        .diagonal-bg {
+            clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+        }
+        
+        .comic-bg {
+            background-image: radial-gradient(#333 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+
+    <!-- Sticky Navigation / Header -->
+    <nav class="fixed top-0 left-0 w-full z-50 px-6 py-4 flex justify-between items-center bg-opacity-80 backdrop-blur-md border-b border-white/10">
+        <div class="text-2xl font-display font-bold tracking-tighter text-keelung-gold">KEELUNG TALE</div>
+        <div class="text-sm font-medium tracking-widest text-gray-400">STUDENT ID: M11408916</div>
+    </nav>
+
+    <!-- Hero Banner Section -->
+    <header class="relative min-h-screen flex items-center justify-center pt-20 pb-12 px-4 overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-40 comic-bg"></div>
+        
+        <div class="container mx-auto relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-7 manga-panel group">
+                    <div class="manga-border bg-black rounded-lg overflow-hidden transform -rotate-1 transition-transform group-hover:rotate-0">
+                        <img src='https://opal.google/board/blobs/c5472886-8733-4575-8b99-a88a8284c631' alt='基隆廟口美型插畫' class="w-full h-auto object-cover" />
+                    </div>
+                    <!-- Manga Caption Box -->
+                    <div class="absolute -bottom-4 -right-4 bg-keelung-red text-white font-display px-6 py-3 manga-border rotate-2 text-xl">
+                        秘辛解鎖！
+                    </div>
+                </div>
+                
+                <div class="lg:col-span-5 space-y-6">
+                    <h1 class="text-5xl md:text-7xl font-display font-black leading-tight">
+                        <span class="block text-white">基隆人不想</span>
+                        <span class="block gradient-text">告訴你的</span>
+                        <span class="block text-keelung-red italic transform skew-x-12">美食秘辛？</span>
+                    </h1>
+                    <p class="text-lg text-gray-300 leading-relaxed max-w-md border-l-4 border-keelung-gold pl-4">
+                        從廟埕拜拜到全球頂尖市集：基隆廟口全攻略。
+                    </p>
+                    <div class="flex space-x-4 pt-4">
+                        <span class="px-4 py-1 rounded-full bg-white/10 text-xs font-bold uppercase tracking-widest text-keelung-gold border border-keelung-gold/30">History</span>
+                        <span class="px-4 py-1 rounded-full bg-white/10 text-xs font-bold uppercase tracking-widest text-keelung-gold border border-keelung-gold/30">Foodie</span>
+                        <span class="px-4 py-1 rounded-full bg-white/10 text-xs font-bold uppercase tracking-widest text-keelung-gold border border-keelung-gold/30">Travel</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-16 space-y-24">
+        
+        <!-- Section 1: Intro -->
+        <section class="max-w-4xl mx-auto">
+            <div class="glass-card p-8 md:p-12 relative">
+                <div class="absolute -top-6 -left-6 w-24 h-24 bg-keelung-gold rounded-full opacity-20 blur-3xl"></div>
+                <h2 class="text-3xl font-display font-bold mb-8 flex items-center">
+                    <span class="section-dot"></span> 一、 不只是夜市，是基隆的靈魂！
+                </h2>
+                <div class="text-xl leading-loose text-gray-300 space-y-6">
+                    <p>
+                        對於許多人來說，基隆的印象往往與細雨、港口以及那抹揮之不去的鹹魚味連結。但在基隆人的心中，真正定義這座城市脈動的，是那個位於仁愛區、以黃色燈籠為標誌的靈魂中心——<span class="text-keelung-gold font-bold">基隆廟口</span>。
+                    </p>
+                    <p>
+                        這裡不僅僅是填飽肚子的地方，它是一座流動的博物館，紀錄了這座港都百年的興衰，更曾被評選為「<span class="border-b-2 border-keelung-red">世界 20 大名市集</span>」，成為國際旅人眼中的台灣之光。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: 101 Guide -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-12 items-stretch">
+            <div class="space-y-6 order-2 md:order-1">
+                <h2 class="text-3xl font-display font-bold mb-4 flex items-center">
+                    <span class="section-dot"></span> 二、 廟口 101：新手必讀的基本通識
+                </h2>
+                <div class="space-y-4 text-gray-300">
+                    <div class="bg-white/5 p-6 rounded-2xl border-l-4 border-keelung-blue">
+                        <h3 class="font-bold text-white mb-2 text-xl">空間邏輯：仁三路 x 愛四路</h3>
+                        <p>廣義的廟口夜市由兩大幹道交織而成。仁三路上的攤位最為整齊，整齊劃一的黃色燈籠飾板與明確的編號管理，是其在經濟全球化浪潮中仍能保有競爭力的關鍵。</p>
+                    </div>
+                    <div class="bg-white/5 p-6 rounded-2xl border-l-4 border-keelung-gold">
+                        <h3 class="font-bold text-white mb-2 text-xl">職人清單</h3>
+                        <p>每一攤都承載著數十年的職人精神：清爽的「鼎邊趖」、外酥內軟的「天婦羅」、極高人氣的「營養三明治」與沁涼的「泡泡冰」。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="order-1 md:order-2 flex items-center justify-center">
+                <div class="w-full h-full min-h-[300px] manga-border bg-keelung-manga p-8 flex flex-col justify-center items-center text-center transform rotate-2">
+                    <div class="text-6xl mb-4">🍜</div>
+                    <p class="text-2xl font-display text-white">專業吃貨<br/>攻略地圖</p>
+                    <div class="mt-4 text-keelung-gold font-mono tracking-tighter">GRID SYSTEM: REN-3RD / AI-4TH</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: History -->
+        <section class="relative py-16">
+            <div class="absolute inset-0 bg-keelung-blue/10 diagonal-bg -z-10"></div>
+            <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8">
+                <div class="lg:col-span-4 flex flex-col justify-center">
+                    <h2 class="text-6xl font-display font-black text-white/10 absolute -top-10 left-0 leading-none pointer-events-none uppercase">History</h2>
+                    <h2 class="text-3xl font-display font-bold mb-8 flex items-center">
+                        <span class="section-dot"></span> 三、 時光隧道
+                    </h2>
+                    <p class="text-keelung-gold font-bold text-5xl mb-4">1875</p>
+                    <p class="text-gray-400">清光緒元年，奠濟宮興建，那是故事的開始。</p>
+                </div>
+                <div class="lg:col-span-8 space-y-6 text-gray-300 leading-relaxed text-lg bg-black/40 p-8 rounded-3xl manga-border">
+                    <p>
+                        要理解廟口的文化深度，必須追溯至當時興建的「奠濟宮」，供奉著開漳聖王。在那個物資匱乏、醫療不發達的年代，廟埕是訊息交換與求神問卜的社交場所。
+                    </p>
+                    <p>
+                        隨著基隆港成為全台門戶，大量勞動力與商賈在此流轉，促使攤位擴張，形成了「<span class="text-white font-bold px-2 bg-keelung-red/40">廟中有夜市、夜市圍繞廟</span>」的特殊景觀。這種從宗教場域轉化為經濟聚落的社會演進，正是基隆廟口與其他現代夜市最本質的區別。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Popularity -->
+        <section class="max-w-4xl mx-auto space-y-12">
+            <h2 class="text-4xl font-display font-bold text-center mb-16"><span class="gradient-text">為什麼它這麼紅？</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="glass-card p-8 hover:bg-white/10 transition-colors">
+                    <div class="text-4xl mb-4">🍲</div>
+                    <h3 class="text-xl font-bold mb-4 text-white">美食的獨創性</h3>
+                    <p class="text-gray-400">如「豆簽羹」這類在台北少見的老派滋味，在廟口依然是當仁不讓的主角。</p>
+                </div>
+                <div class="glass-card p-8 hover:bg-white/10 transition-colors">
+                    <div class="text-4xl mb-4">🕒</div>
+                    <h3 class="text-xl font-bold mb-4 text-white">24小時供餐概念</h3>
+                    <p class="text-gray-400">配合港口作息，不同班別攤位接替經營，確保城市無論何時都有熱氣騰騰的補給。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Challenges (Bento Grid Style) -->
+        <section class="space-y-8">
+            <h2 class="text-3xl font-display font-bold flex items-center">
+                <span class="section-dot"></span> 五、 真心話大冒險：光環下的現實挑戰
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="md:col-span-1 bg-red-900/20 p-8 rounded-3xl border border-red-500/30 flex flex-col justify-between">
+                    <h3 class="text-2xl font-bold text-red-400 mb-4">物價爭議</h3>
+                    <p class="text-gray-300">在地老饕感嘆現在的價格已是「觀光區水準」，與庶民經濟漸行漸遠。</p>
+                    <div class="mt-6 text-6xl opacity-20">💸</div>
+                </div>
+                <div class="md:col-span-2 bg-keelung-blue/20 p-8 rounded-3xl border border-keelung-blue/30 manga-border">
+                    <h3 class="text-2xl font-bold text-keelung-blue mb-4">交通與環境壓力</h3>
+                    <p class="text-gray-300 text-lg">基隆狹窄的地形導致停車位一位難求。當連鎖品牌想進駐，傳統老攤該如何保住「老基隆」的原始靈魂？這是現代化經營的巨大拉鋸。</p>
+                    <div class="mt-8 flex justify-end">
+                        <span class="bg-keelung-blue text-white px-4 py-1 text-sm font-bold">URBAN CHALLENGE</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Future -->
+        <section class="max-w-4xl mx-auto glass-card overflow-hidden">
+            <div class="bg-keelung-gold p-4">
+                <h2 class="text-black font-display text-2xl font-black text-center italic uppercase">Future Vision: 廟口 2.0</h2>
+            </div>
+            <div class="p-8 md:p-12 flex flex-col md:flex-row gap-12 items-center">
+                <div class="flex-1 space-y-6">
+                    <p class="text-xl text-gray-300 leading-relaxed">
+                        面對挑戰，百年市集悄然進行著<span class="text-keelung-gold font-bold underline decoration-wavy">數位轉型</span>。透過「TWQR」等行動支付，數位化交易已滲透進這座老廟埕。
+                    </p>
+                    <p class="text-gray-400">
+                        隨著基隆港轉向「國際郵輪重鎮」，多語系服務與智慧停車系統的優化，展現出迎接全球旅人的野心。這不僅是小吃的競爭，更是城市數位韌性的體現。
+                    </p>
+                </div>
+                <div class="w-full md:w-48 h-48 bg-white rounded-full flex items-center justify-center p-4 border-8 border-keelung-gold/20">
+                    <div class="text-center">
+                        <div class="text-4xl text-black font-black leading-none">AI</div>
+                        <div class="text-xs text-gray-500 font-bold tracking-widest mt-1 uppercase">Tech-Ready</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="text-center py-20 space-y-10 relative">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-keelung-red/5 blur-[120px] -z-10"></div>
+            
+            <h2 class="text-4xl md:text-6xl font-display font-black leading-tight">
+                下一次，換你換個方式<br/>
+                <span class="text-keelung-red italic transform -skew-x-12 inline-block">逛廟口！</span>
+            </h2>
+            
+            <div class="max-w-2xl mx-auto text-xl text-gray-400 leading-loose italic">
+                「當你品嚐著那碗鼎邊趖時，你吃下的不只是熱量，更是這座海港城市在歷史洪流中不卑不亢的生命印記。」
+            </div>
+
+            <div class="pt-10">
+                <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="manga-border bg-white text-black font-display px-10 py-4 text-xl hover:bg-keelung-gold transition-colors active:translate-y-1">
+                    回到頂部 TOP
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Overlay Micro-animations decoration -->
+    <div class="fixed top-20 right-10 float-animation pointer-events-none hidden lg:block">
+        <div class="bg-keelung-gold text-black p-2 font-display text-xs border-2 border-black rotate-12 manga-border">
+            DELICIOUS!
+        </div>
+    </div>
+    <div class="fixed bottom-20 left-10 float-animation pointer-events-none hidden lg:block" style="animation-delay: -3s;">
+        <div class="bg-keelung-red text-white p-2 font-display text-xs border-2 border-black -rotate-12 manga-border">
+            100% KEELUNG
+        </div>
+    </div>
+
+    <script>
+        // Smooth entrance animations for cards
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
